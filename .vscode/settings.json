@@ -1,0 +1,11 @@
+{
+  "workbench.colorCustomizations": {
+    "breadcrumb.activeSelectionForeground": "#ff0000",
+    "activityBar.foreground": "#df188c",
+    "activityBar.inactiveForeground": "#a6ff00",
+    "activityBar.background": "#190cc78c",
+    "sideBar.background": "#002c3a8c",
+    // "sideBar.foreground": "#347890"
+    "sideBar.foreground": "#13bcda"
+  },
+}

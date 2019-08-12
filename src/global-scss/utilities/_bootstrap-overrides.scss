@@ -1,0 +1,176 @@
+// @import './variables.scss';
+
+$enable-responsive-font-sizes: true;
+
+$primary: rgba(61, 138, 166, 1);
+$secondary: rgb(76,140,181);
+// $primary: rgb(55,72,115);
+// $secondary: rgb(76,140,181);
+$success: rgb(134,184,114);
+// $info: ;
+$warning: rgb(222,147,124);
+$danger: rgb(225,90,83);
+// $light: ;
+// $dark: ;
+
+$faf-red: rgba(225,90,83, 1);
+$faf-light-blue: rgba(76,140,181, 1);
+$faf-orange: rgba(222,147,124, 1);
+$faf-dark-blue: rgba(55,72,115, 1);
+$faf-green: rgba(134,184,114, 1);
+
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  // sm: 576px,
+  sm: 425px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+// $container-max-widths: (
+//   sm: 610px,
+//   md: 780px,
+//   lg: 990px,
+//   xl: 1260px
+// );
+
+$font-family-base: "Open Sans", "Adobe Blank";
+$font-size-base: 1.2rem;
+
+@import "~bootstrap/scss/bootstrap";
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Optional
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+
+
+
+a {
+  color: $secondary;
+  text-decoration: none;
+  transition: .2s ease-in-out !important;
+
+  &:hover {
+    text-decoration: none;
+    transition: .2s ease-in-out !important;
+  }
+}
+
+th,
+td,
+ul,
+ol,
+// span,
+p {
+  color: rgb(105, 102, 96);
+}
+
+// .btn {
+//   &:hover {
+//     background-color: transparent;
+//     color: $primary;
+//     transition: all .3s ease-in-out;
+//   }
+// }
+
+// .btn.btn-outline-primary {
+//   &:hover {
+//     background-color: transparent;
+//     color: $white;
+//     transition: all .3s ease-in-out;
+//   }
+// }
+
+.badge {
+  &:hover {
+    cursor: default;
+  }
+}
+
+// .card-columns {
+//   @include media-breakpoint-only(xs) {
+//     column-count: 1;
+//   }
+//   @include media-breakpoint-only(sm) {
+//     column-count: 1;
+//   }
+//   @include media-breakpoint-only(md) {
+//     column-count: 2;
+//   }
+//   @include media-breakpoint-only(lg) {
+//     column-count: 3;
+//   }
+//   @include media-breakpoint-only(xl) {
+//     column-count: 3;
+//   }
+// }
+
+
+// .active > a {
+//   color: $primary;
+// }
+
+// .active {
+//   color: $primary;
+// }
+
+// $blue:    #007bff !default;
+// $indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
+// $colors: (
+//   blue: $blue,
+//   indigo: $indigo,
+//   purple: $purple,
+//   pink: $pink,
+//   red: $red,
+//   orange: $orange,
+//   yellow: $yellow,
+//   green: $green,
+//   teal: $teal,
+//   cyan: $cyan,
+//   white: $white,
+//   gray: $gray-600,
+//   gray-dark: $gray-800
+// ) !default;
+
+// $theme-colors: (
+//   primary: $blue,
+//   secondary: $gray-600,
+//   success: $green,
+//   info: $cyan,
+//   warning: $yellow,
+//   danger: $red,
+//   light: $gray-100,
+//   dark: $gray-800
+// ) !default;

@@ -1,0 +1,132 @@
+// Define Colors
+$primary: rgb(41, 52, 118);
+$secondary: rgb(48, 135, 180);
+
+
+$white: rgba(255, 255, 255, 1);
+$white-80-percent: rgba(255, 255, 255, .8);
+$white-60-percent: rgba(255, 255, 255, .6);
+$black: rgba(0, 0, 0, 1);
+$black-text-color: rgba(0, 0, 0, .9);
+$black-50-percent: rgba(0, 0, 0, .5);
+$black-25-percent: rgba(0, 0, 0, .25);
+$black-12-percent: rgba(0, 0, 0, .125);
+$dark-gray: #3c4040;
+$charcoal: rgba(29, 30, 31, 1);
+$light-gray: #7c8c8e;
+$dark-blue: rgba(5, 59, 84, 1);
+$dark-blue-80-percent: rgba(5, 59, 84, .8);
+$dark-blue-50-percent: rgba(5, 59, 84, .5);
+$light-blue: rgba(41, 123, 161, 1);
+
+$profile-blue: rgb(69, 129, 159);
+
+$meta-color: #808080;
+
+$light-blue-10-percent: rgba(41, 123, 161, .1);
+$light-blue-20-percent: rgba(41, 123, 161, .2);
+$light-blue-30-percent: rgba(41, 123, 161, .3);
+
+$light-blue-1: rgba(52, 155, 203, 1);
+$light-blue-2: rgba(47, 140, 182, 1);
+$light-blue-3: rgba(41, 123, 161, 1);
+$light-blue-4: rgba(37, 109, 142, 1);
+
+$sky-blue: rgba(128, 200, 239, 1);
+$dark-brown: rgba(57, 39, 18, 1);
+$light-brown: rgba(162, 121, 108, 1);
+$bright-white: rgba(240, 248, 255, 1);
+$bright-white-50-percent: rgba(240, 248, 255, .5);
+$dark-purple: rgba(167, 120, 152, 1);
+$dark-purple-55-percent: rgba(167, 120, 152, .55);
+$light-purple: rgba(198, 205, 253, 1);
+$dark-orange: rgba(234, 150, 49, 1);
+$dark-orange-75-percent: rgba(234, 150, 49, .75);
+$light-orange: rgba(239, 176, 100, 1);
+$yellow: rgba(255, 251, 210, 1);
+$apple: rgba(239, 73, 111, 1);
+$apple-80-percent: rgba(239, 73, 111, .7);
+$leaf: rgba(158, 208, 129, 1);
+
+$bootstrap-heading-font-color: #3c4040;
+$bootstrap-paragraph-font-color: #7c8c8e;
+
+$success-font: #3c763d;
+$info-font: #31708f;
+$warning-font: #8a6d3b;
+$danger-font: #a94442;
+
+$success-border: #d0e9c6;
+$info-border: #bcdff1;
+$warning-border: #faf2cc;
+$danger-border: #ebcccc;
+
+$success-background: #dff0d8;
+$info-background: #d9edf7;
+$warning-background: #fcf8e3;
+$danger-background: #f2dede;
+
+// Define Font Variables
+$font-stack: 'Open Sans', sans-serif;
+$root-font-size: 18px;
+
+$heading-letter-spacing: -1px;
+$paragraph-letter-spacing: -.50px;
+// $paragraph-letter-spacing: .7px;
+
+// Define Link Transition Timing
+$link-transition: .2s ease-in-out;
+
+// Define font weights
+$normal-font-weight: 400;
+$thin-font-weight: 200;
+
+// Define Table border color
+$table-border-color: #eceeef;
+
+// Define body variables
+$bootstrap-alternate-row-color: rgba(0, 0, 0, .05);
+$row-overlay-dark-color: rgba(0, 0, 0, .4);
+$row-overlay-light-color: rgba(255, 255, 255, .6);
+$content-row-height: 35rem;
+// $news-row-height: 35rem;
+$overlay-height: 35rem;
+//$jumbotron-height: 35rem;
+
+// Styling Buttons
+$button-shadow-light-gray: rgba(255, 255, 255, .1);
+$button-shadow-light-gray-active: rgba(0, 0, 0, .1);
+$button-shadow-dark-gray: rgba(0, 0, 0, .25);
+
+// Styling Carousels
+$carousel-list-item-background-color: rgba(0, 0, 0, .5);
+
+// Footer
+$footer-border-top-color: #e6e6e6;
+
+// Style the Breadcrumbs
+$breadcrumb-background-color: rgba(0, 0, 0, .25);
+
+// Home Page Jumbotron
+$jumbotron-text-shadow-dark: rgba(0, 0, 0, .4);
+$jumbotron-text-shadow-light: rgba(0, 0, 0, .075);
+$link-hover-text-shadow: rgba(255, 255, 255, .9);
+
+// Jumbotron Button
+$button-box-shadow-light: rgba(255, 255, 255, .1);
+$button-box-shadow-dark: rgba(0, 0, 0, .25);
+$button-box-shadow-medium: rgba(0, 0, 0, .1);
+
+// Card Shadows
+$level-1-shadow-color-1: rgba(0, 0, 0, .16);
+$level-1-shadow-color-2: rgba(0, 0, 0, .12);
+$level-2-shadow-color-1: rgba(0, 0, 0, .18);
+$level-2-shadow-color-2: rgba(0, 0, 0, .15);
+$card-img-overlay: rgba(51, 51, 51, .85);
+$card-link-font-color: rgba(5, 59, 84, 1);
+
+$rss-color: #fa9b39;
+
+$facebook-color: rgb(66, 103, 178);
+$twitter-color: rgb(29, 161, 242);
+$linkedin-color: rgb(0, 119, 181);

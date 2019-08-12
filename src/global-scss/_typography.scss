@@ -1,0 +1,111 @@
+@import './utilities/font-awesome';
+@import './utilities/variables.scss';
+
+.emphasis {
+  font-family: Lora;
+  font-style: italic;
+}
+
+.heading2 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+@include media-breakpoint-up(md) {
+  .heading2 {
+    font-size: 1.9rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .heading2 {
+    font-size: 2.4rem;
+  }
+}
+
+.date {
+  font-family: Lora;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.blogquote {
+  @extend %fa-icon;
+  @extend .fas;
+
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.25;
+  border-top: 3px dotted $secondary;
+  border-bottom: 3px dotted $secondary;
+  padding: .75rem;
+
+  &:before {
+    content: fa-content($fa-var-quote-left);
+    padding: 0 1rem 0 0;
+    font-style: italic;
+  }
+
+  // &:after {
+  //   content: fa-content($fa-var-quote-right);
+  //   padding: 0 0 0 1rem;
+  //   font-style: italic;
+  // }
+}
+
+.facebook-social-icon {
+  color: $facebook-color;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: darken($facebook-color, 10%);
+    transition: .2s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.twitter-social-icon {
+  color: $twitter-color;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: darken($twitter-color, 10%);
+    transition: .2s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.linkedin-social-icon {
+  color: $linkedin-color;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: darken($linkedin-color, 10%);
+    transition: .2s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.envelope-social-icon {
+  color: $secondary;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: darken($secondary, 10%);
+    transition: .2s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

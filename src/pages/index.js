@@ -1,21 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layout/layout"
+import SEO from "../components/layout/seo"
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <SEO title="About" />
+    <h1>About</h1>
+    <p>Cameron Yee currently works at <a href="https://bscs.org" target="_blank" rel="noopener noreferrer">BSCS Science Learning&nbsp;<sup><i className="fas fa-external-link-alt"></i></sup></a> as a software developer in Colorado Springs, CO.</p>
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage

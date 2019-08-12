@@ -1,0 +1,29 @@
+@import 'colors';
+
+:root {
+  --icon-color: #000;
+  --icon-hover-color: #424242;
+}
+
+[data-theme="dark"] {
+  --icon-color: #fff;
+  --icon-hover-color: #ccc;
+}
+
+.nav-link {
+  color: $secondary;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.github {
+  color: var(--icon-color);
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: var(--icon-hover-color);
+    transition: color .3s ease-in-out;
+  }
+}

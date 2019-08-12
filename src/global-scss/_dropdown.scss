@@ -1,0 +1,67 @@
+.dropdown-toggle {
+  &::after {
+    transform: rotate(0deg);
+    transition: all .3s ease-in-out;
+  }
+  &:focus {
+    &::after {
+      transform: rotate(270deg);
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.dropdown {
+  // overflow: hidden;
+
+  > .dropdown-menu {
+    // The below line causes problems on the mobile menu. So it has been commented out. We should find a different approach.
+    // display: block !important;
+    opacity: 0;
+    // max-height: 0;
+    // visibility: hidden;
+
+    transition: all 0.3s ease-in-out;
+
+    &.show {
+      // max-height: inherit;
+      transition: all 0.3s ease-in-out;
+      // max-height: 500px;
+      opacity: 1;
+      // visibility: visible;
+    }
+  }
+}
+
+.dropdown-item {
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    animation: pulse;
+    animation-duration: 0.2s;
+  }
+}
+
+
+// .dropdown-menu {
+//   display: block !important;
+//   // max-height: 0;
+//   transition: all 0.3s ease-in-out;
+//   opacity: 0;
+//   visibility: hidden;
+
+//   > a {
+//     display: none;
+//   }
+
+//   &.show {
+//     // max-height: inherit;
+//     transition: all 0.3s ease-in-out;
+//     opacity: 1;
+//     visibility: visible;
+//     > a {
+//       display: block;
+//     }
+//   }
+// }

@@ -27,3 +27,56 @@
     transition: color .3s ease-in-out;
   }
 }
+
+.ais-InstantSearch__root {
+  position: relative;
+}
+
+// .ais-SearchBox-input {
+  // border-top-left-radius: .25rem;
+  // border-bottom-left-radius: .25rem;
+  // border: 1px solid #424242;
+  // border-right: none;
+  // height: 32px;
+// }
+
+// .ais-SearchBox-submit {
+  // border-top-right-radius: .25rem;
+  // border-bottom-right-radius: .25rem;
+  // border: 1px solid #424242;
+  // border: none;
+  // padding: 1px;
+// }
+
+.ais-SearchBox-reset {
+  border-radius: .25rem;
+  border: 1px solid #424242;
+  margin-left: .25rem;
+}
+
+.ais-Hits {
+  background: #fff;
+  border: 1px solid #424242;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  position: absolute;
+  top: 32px;
+  z-index: 10000;
+  width: 100%
+}
+
+.ais-Hits-list {
+  background: #fff;
+  list-style: none;
+  padding-left: .25rem;
+}
+
+// .ais-SearchBox { margin: 1em 0; }
+// .ais-Pagination { margin-top: 1em }
+// .left-panel { float: left; width: 250px; }
+// .right-panel { margin-left: 260px; }
+// .ais-InstantSearch { max-width: 960px; overflow: hidden; margin: 0 auto }
+.ais-Hits-item { margin-bottom: 1em; width: calc(50% - 1rem) }
+// .ais-Hits-item img { margin-right: 1em }
+// .hit-name { margin-bottom: .5em }
+// .hit-description { color: #888; font-size: 14px; margin-bottom: .5em }

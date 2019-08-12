@@ -1,8 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
-import Image from "../components/image"
 import SEO from "../components/layout/seo"
 
 const ProjectsPage = () => (
@@ -20,6 +18,7 @@ const ProjectsPage = () => (
     <h2>Scripting</h2>
     <section>
       <ul>
+        {/* eslint-disable-next-line */}
         <li><a href="#" target="_blank" rel="noopener noreferrer">CAPI&nbsp;<sup><i className="fas fa-external-link-alt"></i></sup></a></li>
       </ul>
     </section>

@@ -1,3 +1,5 @@
+const queries = require("./src/utils/algolia")
+
 module.exports = {
   siteMetadata: {
     title: `Cameron Yee`,
@@ -27,7 +29,16 @@ module.exports = {
         icon: `src/images/favicon_io/favicon-16x16.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries,
+        chunkSize: 10000
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -24,6 +24,7 @@ const TechStackPage = () => (
         <li>NGINX</li>
         <li>Netlify</li>
         <li>NodeJS</li>
+        <li>PostgreSQL</li>
         <li>Sass</li>
       </ul>
       <h3>Also likes...</h3>
@@ -35,6 +36,7 @@ const TechStackPage = () => (
         <li>Angular</li>
         <li>Django</li>
         <li>REST APIs (GraphQL if at all possible)</li>
+        <li>MySQL, MariaDB</li>
       </ul>
       <h3>Hates with a passion...</h3>
       <ul>
@@ -66,7 +68,17 @@ const TechStackPage = () => (
     <section>
       <ul>
         <li>Rust</li>
-        <li>Phoenix Framework</li>
+        <li>Rust</li>
+      </ul>
+    </section>
+
+    <h2>API Experience</h2>
+    <hr />
+    <section>
+      <ul>
+        <li>Stripe</li>
+        <li>Canvas LMS</li>
+        <li>Vimeo</li>
       </ul>
     </section>
   </Layout>

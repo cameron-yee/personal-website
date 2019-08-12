@@ -14,7 +14,7 @@ export default function Header(props) {
   return (
     // <header style={{background: 'rgba(25, 12, 199, 1)'}}>
     <header>
-      <nav className="d-flex justify-content-start">
+      <nav className="d-flex justify-content-start flex-wrap">
         {/* <h1 className="p-3">{props.siteTitle}</h1> */}
         <Link to="/" className="p-3 align-self-center">About</Link>
         <Link to="/tech-stack" className="p-3 align-self-center">Tech Stack</Link>

@@ -66,6 +66,13 @@ $font-size-base: 1.2rem;
 @import "~bootstrap/scss/code";
 @import "~bootstrap/scss/grid";
 
+:root {
+  --text-color: rgb(105, 102, 96);
+}
+
+[data-theme="dark"] {
+  --text-color: #cdcdcd;
+}
 
 
 a {
@@ -85,7 +92,11 @@ ul,
 ol,
 // span,
 p {
-  color: rgb(105, 102, 96);
+  color: var(--text-color);
+}
+
+input {
+  color: #212121;
 }
 
 // .btn {

@@ -46,7 +46,7 @@ export default function ThemeToggle(props) {
   }, [])
 
   return (
-    <div className={props.className ? `${props.className} theme-switch-wrapper` : `theme-switch-wrapper`}>
+    <div className={props.className ? `${props.className} theme-switch-wrapper` : `theme-switch-wrapper`} style={props.style}>
       <label className="theme-switch" htmlFor="checkbox">
         <input type="checkbox" id="checkbox" />
         {/* <div className="slider round" > */}

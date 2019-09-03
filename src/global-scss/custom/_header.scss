@@ -3,11 +3,15 @@
 :root {
   --icon-color: #000;
   --icon-hover-color: #424242;
+  --hits-results: #fff;
+  --hits-results-color: #212121;
 }
 
 [data-theme="dark"] {
   --icon-color: #fff;
   --icon-hover-color: #ccc;
+  --hits-results: #424242;
+  --hits-results-color: #cdcdcd;
 }
 
 .nav-link {
@@ -32,30 +36,33 @@
   position: relative;
 }
 
-// .ais-SearchBox-input {
+.ais-SearchBox-input {
+  border-radius: .25rem;
   // border-top-left-radius: .25rem;
   // border-bottom-left-radius: .25rem;
-  // border: 1px solid #424242;
+  border: 1px solid #424242;
   // border-right: none;
-  // height: 32px;
-// }
+  height: 32px;
+}
 
-// .ais-SearchBox-submit {
+.ais-SearchBox-submit {
+  display: none;
   // border-top-right-radius: .25rem;
   // border-bottom-right-radius: .25rem;
   // border: 1px solid #424242;
   // border: none;
   // padding: 1px;
-// }
+}
 
 .ais-SearchBox-reset {
-  border-radius: .25rem;
-  border: 1px solid #424242;
-  margin-left: .25rem;
+  display: none;
+  // border-radius: .25rem;
+  // border: 1px solid #424242;
+  // margin-left: .25rem;
 }
 
 .ais-Hits {
-  background: #fff;
+  background: var(--hits-results);
   border: 1px solid #424242;
   border-bottom-left-radius: .25rem;
   border-bottom-right-radius: .25rem;
@@ -66,7 +73,8 @@
 }
 
 .ais-Hits-list {
-  background: #fff;
+  background: var(--hits-results);
+  color: var(--hits-results-color);
   list-style: none;
   padding-left: .25rem;
 }

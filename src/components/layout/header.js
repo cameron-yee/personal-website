@@ -8,12 +8,12 @@ import ThemeToggle from '../atoms/theme-toggle'
 
 const Hit = (props) => {
   return (
-    <div className="p-2 ais-Hit ais-clickable">
-      <Link className="ais-clickable" to={props.hit.page}>{props.hit.title}</Link>
+    <Link to={props.hit.page} className="p-2 ais-Hit ais-clickable d-block">
+      <span>{props.hit.title}</span>
         {/* <Highlight attribute="title" hit={props.hit} tagName="mark" /> */}
 
       <div className="ais-clickable">{props.hit.description}</div>
-    </div>
+    </Link>
   )
 }
 
@@ -99,24 +99,56 @@ const handleHitsDisplay = (e) => {
   }
 }
 
-// const handleKeyDown = (e, count=0) => {
-//   console.log(e.keyCode)
+const handleSearchArrowUp = (active_element, hit_elements, count) => {
+  if (count > 1) {
+    active_element.blur()
+    const new_count = --count
+    hit_elements[new_count].setAttribute('tabindex', '-1')
+    hit_elements[new_count].focus()
+    return new_count
+  } else if (count === 0) {
+    document.getElementsByClassName('ais-SearchBox-input')[0].setAttribute('tabindex', '-1')
+    document.getElementsByClassName('ais-SearchBox-input')[0].focus()
+    return -1
+  } else {
+    active_element.blur()
+    hit_elements[0].setAttribute('tabindex', '-1')
+    hit_elements[0].focus()
+    return 0
+  }
+}
 
-//   const elem_lg = document.getElementsByClassName('ais-Hits-list')[0]
-//   const elem_sm = document.getElementsByClassName('ais-Hits-list')[1]
+const handleSearchArrowDown = (active_element, number_of_hits, hit_elements, count) => {
+    if (count >= number_of_hits - 1) {
+      active_element.blur()
+      hit_elements[number_of_hits - 1].setAttribute('tabindex', '-1')
+      hit_elements[number_of_hits - 1].focus()
+      return number_of_hits - 1
+    } else {
+      active_element.blur()
+      const new_count = ++count
+      hit_elements[new_count].setAttribute('tabindex', '-1')
+      hit_elements[new_count].focus()
+      return new_count
+    }
+}
 
-//   if (elem_lg) {
-//     console.log(elem_lg.childNodes.length)
-//   }
+const handleKeyDown = (e, count=-1) => {
+  const active_element = document.activeElement
+  // console.log(active_element)
+  const hit_elements = document.getElementsByClassName('ais-Hit')
+  const number_of_hits = hit_elements.length
 
-//   if (e.keyCode === '38') {
-//     if (elem_lg.style.display !== 'none') {
-//       elem_lg.childNodes[0].focus()
-//     }
-//   }
+  if (number_of_hits !== 0 && e.target.classList.contains('ais-clickable') && e.keyCode === 38) {
+    return handleSearchArrowUp(active_element, hit_elements, count)
+  }
 
-//   return ++count
-// }
+  if (number_of_hits !== 0 && e.target.classList.contains('ais-clickable') && e.keyCode === 40) {
+    return handleSearchArrowDown(active_element, number_of_hits, hit_elements, count)
+  }
+
+  return -1
+}
 
 export default function Header() {
   useEffect(() => {
@@ -124,12 +156,18 @@ export default function Header() {
 
     window.addEventListener('click', handleHitsDisplay)
 
-    // let count = 0
-    // document.addEventListener('keydown', (e) => {
-    //   count = handleKeyDown(e, count)
-    //   console.log(count)
-    // })
-    // document.onkeyup = handleKeyDown
+    let count = -1
+    document.addEventListener('keydown', (e) => {
+      if(document.activeElement.classList.contains('ais-clickable') && [32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault()
+      }
+
+      // ensures hit elements are on DOM
+      setTimeout(() => {
+        count = handleKeyDown(e, count)
+        console.log(count)
+      }, 250)
+    })
 
     let timeout = undefined
     if (typeof window !== `undefined`) {
@@ -171,7 +209,7 @@ export default function Header() {
             <i className="fab fa-github fa-2x github"></i>
           </a>
         </nav>
-        <div className="p-3 ml-auto search align-self-center ais-clickable">
+        <div id="search-container-lg" className="p-3 ml-auto search align-self-center ais-clickable">
           <InstantSearch
             searchClient={searchClient}
             indexName="dev_INDEX"
@@ -190,7 +228,7 @@ export default function Header() {
           <p><Link to="/tech-stack" className="p-3 align-self-center">Tech Stack</Link></p>
           <p><Link to="/projects" className="p-3 align-self-center">Projects</Link></p>
         </nav>
-        <div className="pt-0 pb-3 px-3 search align-self-center">
+        <div id="search-container-sm" className="pt-0 pb-3 px-3 search align-self-center ais-clickable">
           <InstantSearch
             searchClient={searchClient}
             indexName="dev_INDEX"

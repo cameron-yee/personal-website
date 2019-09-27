@@ -4,6 +4,7 @@
   --icon-color: #000;
   --icon-hover-color: #424242;
   --hits-results: #fff;
+  --hit-div: #555;
   --hit-hover: #ddd;
   --hits-results-color: #212121;
 }
@@ -12,6 +13,7 @@
   --icon-color: #fff;
   --icon-hover-color: #ccc;
   --hits-results: #424242;
+  --hit-div: #faaaaf;
   --hit-hover: #868686;
   --hits-results-color: #cdcdcd;
 }
@@ -63,9 +65,28 @@
   background: var(--hits-results);
   transition: background .3s ease-in-out;
 
+  > span {
+    background: var(--hits-results);
+    color: $secondary !important;
+  }
+
+  > div {
+    background: var(--hits-results);
+    color: var(--hit-div) !important;
+  }
+
+  &:focus,
   &:hover {
     background: var(--hit-hover);
     transition: background .3s ease-in-out;
+
+    > span {
+      background: var(--hit-hover);
+    }
+
+    > div {
+      background: var(--hit-hover);
+    }
   }
 }
 
